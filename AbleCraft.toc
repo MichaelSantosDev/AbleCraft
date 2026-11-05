@@ -1,0 +1,45 @@
+## Interface: 16001, 16000, 120105, 120100, 120007
+## Title: AbleCraft
+## Notes: Accessibility suite for World of Warcraft (Text-to-Speech and accessibility tools).
+## Notes-ptBR: Suíte de acessibilidade para World of Warcraft (Texto para Fala e ferramentas de acessibilidade).
+## Notes-deDE: Barrierefreiheits-Suite für World of Warcraft (Text-zu-Sprache und Werkzeuge).
+## Notes-frFR: Suite d'accessibilité pour World of Warcraft (Synthèse vocale et outils).
+## Notes-esES: Suite de accesibilidad para World of Warcraft (Texto a voz y herramientas).
+## Notes-esMX: Suite de accesibilidad para World of Warcraft (Texto a voz y herramientas).
+## Notes-itIT: Suite di accessibilità per World of Warcraft (Sintesi vocale e strumenti).
+## Notes-ruRU: Набор инструментов доступности для World of Warcraft (озвучивание текста и утилиты).
+## Notes-koKR: 월드 오브 워크래프트 접근성 도구 모음 (텍스트 음성 변환 및 보조 기능).
+## Notes-zhCN: 魔兽世界无障碍套件（文本转语音与辅助工具）。
+## Notes-zhTW: 魔獸世界無障礙套件（文字轉語音與輔助工具）。
+## Author: Michael O'Drake
+## Version: 1.0.0
+## X-Category: Accessibility
+## SavedVariables: AbleCraftDB, UiTTSDB
+
+# i18n: loader first, then per-locale files (each guards on GetLocale()).
+Locales\Locales.lua
+Locales\enUS.lua
+Locales\ptBR.lua
+Locales\deDE.lua
+Locales\esES.lua
+Locales\esMX.lua
+Locales\frFR.lua
+Locales\itIT.lua
+Locales\koKR.lua
+Locales\ruRU.lua
+Locales\zhCN.lua
+Locales\zhTW.lua
+
+# Core: AbleCraft.lua sets up the root menu and DB; UiTTS.lua publishes UiTTS_NS helpers.
+AbleCraft.lua
+UiTTS.lua
+UiTTS_UIReader.lua
+UiTTS_XP.lua
+UiTTS_Chat.lua
+# Options must load before the Guide so the Guide can attach as a subcategory.
+UiTTS_Options.lua
+UiTTS_Guide.lua
+
+# NOTE: Bindings.xml is intentionally NOT listed here. WoW auto-loads a file
+# named Bindings.xml from the addon root; listing it in the .toc would also route
+# it through the generic UI-XML parser, which raises "Unrecognized XML: Binding".

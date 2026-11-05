@@ -1,0 +1,14 @@
+<Bindings>
+	<Binding name="UITTS_TOGGLE" category="BINDING_HEADER_UITTS">
+		UiTTS_Binding_Toggle();
+	</Binding>
+	<Binding name="UITTS_STOP" category="BINDING_HEADER_UITTS">
+		UiTTS_Binding_Stop();
+	</Binding>
+	<Binding name="UITTS_REPEAT" category="BINDING_HEADER_UITTS">
+		UiTTS_Binding_Repeat();
+	</Binding>
+	<Binding name="UITTS_READ_TOOLTIP" category="BINDING_HEADER_UITTS">
+		UiTTS_Binding_ReadTooltip();
+	</Binding>
+</Bindings>
